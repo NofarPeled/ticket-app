@@ -1,0 +1,10 @@
+const Types = {
+    ADD_TICKET: 'ADD_TICKET',
+    UPDATE_TICKET: 'UPDATE_TICKET',
+    REMOVE_TICKET: 'REMOVE_TICKET',
+    SET_TICKET: 'SET_TICKET',
+    SET_TICKETS: 'SET_TICKETS',
+    SET_SORT_BY: 'SET_SORT_BY'
+}
+
+export default Types

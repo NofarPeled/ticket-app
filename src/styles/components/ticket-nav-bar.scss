@@ -1,0 +1,15 @@
+.ticket-nav-bar {
+    display: flex;
+    justify-content: space-around;
+    .add-ticket-link {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background-color: $main-color;
+        color: $color3;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+
+    }
+}

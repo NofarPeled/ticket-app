@@ -1,0 +1,19 @@
+.header-section {
+    
+    background-color: $main-color;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19);
+
+    .header-title, i {
+        color: $color3;
+        font-size: 3.5rem;
+        padding: 1rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .header-title { 
+        font-family: $theme-font;
+    }
+    
+}

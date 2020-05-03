@@ -1,0 +1,63 @@
+.ticket-details-page {
+    height: 100vh;
+    background-color: $color2;
+
+    .ticket-details {
+        display: grid;
+        grid-template-columns: 10px 1fr 1fr repeat(3, 40px);
+        grid-template-rows: 4rem 40px 1fr;
+        grid-row-gap: 5px;
+        background-color: $color3;
+        margin: 20px auto;
+        width: 80vw;
+        height: 80vh;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+        align-items: center;
+        
+        .title {
+            font-size: 2rem;
+            font-family: $theme-font;
+            font-weight: bold;
+            background-color: $main-color;
+            color: $color3;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            padding: 10px;
+            grid-area: 1 / 1 / 2 / span 6
+        }
+
+        & > * {
+            padding: 20px;
+        }
+
+        .body {
+            font-size: 1.25rem;
+            grid-area: 3 / 1 / 4 / span 6;
+            padding: 20px;
+            background-color: $color2;
+            align-self: stretch;
+        }
+
+
+        .created-at {
+            font-size: 0.85rem;
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .due-date {
+            font-size: 0.85rem;
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .remove-btn {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+        .edit-link {
+            grid-area: 2 / 5 / 3 / 6;
+        }
+
+
+    }
+}

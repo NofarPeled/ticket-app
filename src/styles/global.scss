@@ -1,0 +1,17 @@
+// SETUP
+@import "setup/variables.scss";
+
+// BASICS
+@import "basics/base.scss";
+@import "basics/typography.scss";
+
+// PAGES
+@import "pages/ticket-edit.scss";
+@import "pages/ticket-details.scss";
+
+//COMPONENTS
+@import "components/ticket-list.scss";
+@import "components/header.scss";
+@import "components/ticket-nav-bar.scss";
+@import "components/ticket-preview.scss";
+@import "components/sort-by-select.scss";

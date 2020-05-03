@@ -1,0 +1,33 @@
+.ticket-preview {
+    height: 100%;
+    border: 1px solid rgba(192, 192, 192, 0.493);
+    padding: 10px;
+
+    &:hover {
+        background-color: $color4;
+        transition: 10ms;
+    }
+    a {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 0.5fr 0.5fr 30px 30px;
+        grid-column-gap: 5px;
+        align-content: center;
+
+        &  > h1 , h2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        
+        }
+        & > h1 {
+            font-size: 1.25rem;
+            margin-left: 5px;
+        }
+        & > h2 {
+            font-size: 1rem;
+            margin-right: 5px;
+        }   
+    }
+
+}
