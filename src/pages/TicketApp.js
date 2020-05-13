@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
-import Header from '../components/Header';
 import TicketList from '../components/TicketList';
 import TicketNavBar from '../components/TicketNavBar';
 
@@ -36,7 +35,6 @@ const TicketApp = () => {
 
     return (
         <section className = 'ticket-app-page'>
-            <Header />
             <TicketNavBar onSetSortBy = { onSetSortBy } />
             <TicketList tickets = { tickets } onTicketRemove = { onTicketRemove } sortBy = { sortBy }/>
         </section>

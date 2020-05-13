@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { getById, remove } from '../store/actions/TicketAction';
-import Header from '../components/Header';
 import UtilService from '../services/UtilService';
 import AlertService from '../services/AlertService';
 
@@ -20,7 +19,7 @@ const TicketDetails = props => {
         try {
             const res = await AlertService.confirmAlert('Are You Sure You Want To Delete Ticket? ');
             if (res) await dispatch(remove(id));        
-            props.history.push('/');
+            props.history.push(process.env.PUBLIC_URL + '/');
         } catch (err) {
             AlertService.eventAlert('Failed to Delete Ticket')
         }
@@ -28,7 +27,6 @@ const TicketDetails = props => {
 
     return (
         <section className = 'ticket-details-page'>
-            <Header />
             { ticket._id 
                 ? <section className = 'ticket-details'>
                     <h1 className = 'title'>{ticket.subject}</h1>

@@ -7,6 +7,7 @@ import TicketDetails from './pages/TicketDetails';
 import TicketEdit from './pages/TicketEdit';
 import { query } from './store/actions/TicketAction';
 
+import Header from './components/Header';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,10 +19,11 @@ const App = () => {
   return (
    <Router>
       <div className = 'App'>
+        <Header/>
         <Switch>
           <Route path = { process.env.PUBLIC_URL + '/ticket/edit/:id?' } component = { TicketEdit } />
           <Route path = { process.env.PUBLIC_URL + '/ticket/:id' } component = { TicketDetails } />
-          <Route path = { process.env.PUBLIC_URL + '/' } component = { TicketApp } />
+          <Route exact path = { process.env.PUBLIC_URL + '/' } component = { TicketApp } />
         </Switch>
       </div>
    </Router>

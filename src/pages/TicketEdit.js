@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
+
 import { getById, add, update } from '../store/actions/TicketAction';
 import AlertService from '../services/AlertService';
-
-import Header from '../components/Header';
 
 const TicketEdit = props => {
     const dispatch = useDispatch();
@@ -41,7 +40,6 @@ const TicketEdit = props => {
 
     return (
         <section className = 'ticket-edit'>
-            <Header />
             <h1 className = 'title'>{ id ? 'Edit Ticket' : 'Create Ticket' }</h1>
             <form  onSubmit = { onTicketSubmit}>
                 <input 
