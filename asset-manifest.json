@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ticket-app/static/css/main.341e2911.chunk.css",
-    "main.js": "/ticket-app/static/js/main.f071b7d8.chunk.js",
-    "main.js.map": "/ticket-app/static/js/main.f071b7d8.chunk.js.map",
-    "runtime-main.js": "/ticket-app/static/js/runtime-main.ddf693de.js",
-    "runtime-main.js.map": "/ticket-app/static/js/runtime-main.ddf693de.js.map",
-    "static/js/2.c6a3568f.chunk.js": "/ticket-app/static/js/2.c6a3568f.chunk.js",
-    "static/js/2.c6a3568f.chunk.js.map": "/ticket-app/static/js/2.c6a3568f.chunk.js.map",
-    "index.html": "/ticket-app/index.html",
-    "precache-manifest.06ac34cb6c8fc9cd452c6845bffa6381.js": "/ticket-app/precache-manifest.06ac34cb6c8fc9cd452c6845bffa6381.js",
-    "service-worker.js": "/ticket-app/service-worker.js",
-    "static/css/main.341e2911.chunk.css.map": "/ticket-app/static/css/main.341e2911.chunk.css.map",
-    "static/js/2.c6a3568f.chunk.js.LICENSE.txt": "/ticket-app/static/js/2.c6a3568f.chunk.js.LICENSE.txt",
-    "static/media/global.scss": "/ticket-app/static/media/Raleway-MediumItalic.d3aded9f.ttf"
+    "main.css": "/Tickets/static/css/main.29f2480b.chunk.css",
+    "main.js": "/Tickets/static/js/main.37a0215b.chunk.js",
+    "main.js.map": "/Tickets/static/js/main.37a0215b.chunk.js.map",
+    "runtime-main.js": "/Tickets/static/js/runtime-main.77988a6e.js",
+    "runtime-main.js.map": "/Tickets/static/js/runtime-main.77988a6e.js.map",
+    "static/js/2.c6a3568f.chunk.js": "/Tickets/static/js/2.c6a3568f.chunk.js",
+    "static/js/2.c6a3568f.chunk.js.map": "/Tickets/static/js/2.c6a3568f.chunk.js.map",
+    "index.html": "/Tickets/index.html",
+    "precache-manifest.1e3a4838e5e38d32041022f20c05fcb7.js": "/Tickets/precache-manifest.1e3a4838e5e38d32041022f20c05fcb7.js",
+    "service-worker.js": "/Tickets/service-worker.js",
+    "static/css/main.29f2480b.chunk.css.map": "/Tickets/static/css/main.29f2480b.chunk.css.map",
+    "static/js/2.c6a3568f.chunk.js.LICENSE.txt": "/Tickets/static/js/2.c6a3568f.chunk.js.LICENSE.txt",
+    "static/media/global.scss": "/Tickets/static/media/Raleway-MediumItalic.d3aded9f.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.ddf693de.js",
+    "static/js/runtime-main.77988a6e.js",
     "static/js/2.c6a3568f.chunk.js",
-    "static/css/main.341e2911.chunk.css",
-    "static/js/main.f071b7d8.chunk.js"
+    "static/css/main.29f2480b.chunk.css",
+    "static/js/main.37a0215b.chunk.js"
   ]
 }
