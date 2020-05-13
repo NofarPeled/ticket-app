@@ -7,7 +7,7 @@ const TicketPreview = props => {
     const history = useHistory();
 
     return (
-        <li className = 'ticket-preview' onClick = { () => history.push(`/ticket/${ticket._id}`)}>
+        <li className = 'ticket-preview' onClick = { () => history.push( process.env.PUBLIC_URL + `/ticket/${ticket._id}`) }>
             <h1 className = 'title'> { ticket.subject } </h1>
             <h2 className = 'body'> { ticket.body } </h2>  
             <h2 className = 'create-at'>                         
