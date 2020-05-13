@@ -1,6 +1,6 @@
 export default {
     makeId,
-    dateConvertor
+    getFormatDate
 }
 
 function makeId(length = 10) {
@@ -12,9 +12,9 @@ function makeId(length = 10) {
     return txt;
 }
 
-function dateConvertor(date) {
-  date = new Date( date )
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return date.getUTCDate() + ' ' + months[date.getUTCMonth()] + ', ' + date.getUTCFullYear();
-}
+function getFormatDate(date) {
+  date = new Date(date || '')  
+  const todayDate = new Date(); 
+
+  return `${ date.getDate() }/${ date.getMonth()+1 }${ todayDate.getFullYear() === date.getFullYear() ? '' : `/${ date.getFullYear()} `}`;
+};

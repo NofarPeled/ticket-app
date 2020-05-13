@@ -7,56 +7,56 @@ export default {
     remove,
     update,
     getById
-}
+};
 
-const TICKET_KEY = 'ticket'
+const TICKET_KEY = 'ticket';
 
 async function query() {
     try {
         const tickets = LocalStorageService.load(TICKET_KEY);
         if (!tickets) {
-            LocalStorageService.save(TICKET_KEY, demoTicketsList)
-            return demoTicketsList
-        }
+            LocalStorageService.save(TICKET_KEY, demoTicketsList);
+            return demoTicketsList;
+        };
         return tickets;
     } catch (err) {
         throw err;
-    }
-}
+    };
+};
 
 async function add(ticket) {
     try {
-        let tickets = LocalStorageService.load(TICKET_KEY) || [];
-        ticket._id = UtilService.makeId()
-        tickets.unshift(ticket)
+        let tickets = LocalStorageService.load(TICKET_KEY);
+        ticket._id = UtilService.makeId();
+        tickets.unshift(ticket);
         LocalStorageService.save(TICKET_KEY, tickets);
         return ticket;
     } catch (err) {
         throw err;
-    }
-}
+    };
+};
 
 async function remove(id) {
     try {
         let tickets = LocalStorageService.load(TICKET_KEY);
-        const updatedTicketsList = tickets.filter( ticket => ticket._id !== id )
+        const updatedTicketsList = tickets.filter( ticket => ticket._id !== id );
         LocalStorageService.save(TICKET_KEY, updatedTicketsList);
     } catch (err) {
         throw err;
-    }
-}
+    };
+};
 
 async function update(ticket) {
     try {
         let tickets = LocalStorageService.load(TICKET_KEY);
         const idx = tickets.findIndex( currTicket => {
-            return ticket._id === currTicket._id 
+            return ticket._id === currTicket._id;
         });
         tickets.splice(idx, 1, ticket);
         LocalStorageService.save(TICKET_KEY, tickets);
     } catch (err) {
         throw err;
-    }
+    };
 }
 
 async function getById(id) {
@@ -65,8 +65,8 @@ async function getById(id) {
         return tickets.find( ticket => ticket._id === id);
     } catch (err) {
         throw err;
-    }
-}
+    };
+};
 
 
 const demoTicketsList = [
@@ -143,4 +143,4 @@ const demoTicketsList = [
         "subject":"Morbi non arcu risus quis varius",
         "body":"Mus mauris vitae ultricies leo integer malesuada nunc vel. Vitae congue eu consequat ac felis. Tortor at risus viverra adipiscing at. Quam quisque id diam vel quam. In fermentum posuere urna nec tincidunt praesent semper!"
     }
-]
+];

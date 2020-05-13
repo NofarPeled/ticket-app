@@ -33,10 +33,17 @@ const TicketDetails = props => {
                 ? <section className = "ticket-details">
                     <h1 className = "title">{ticket.subject}</h1>
                     <h2 className = "body">{ticket.body}</h2>
-                    <h2 className = "created-at">Created At: {UtilService.dateConvertor(ticket.createdAt)}</h2> 
-                    <h2 className = "due-date">Due Date: {ticket.dueDate ? UtilService.dateConvertor(ticket.dueDate) : 'Off'}</h2>
-                    <button className = "remove-btn" onClick = { (e) => {
-                        e.preventDefault()
+                    <h2 className = "created-at">
+                        <i class="far fa-clock"></i> { UtilService.getFormatDate(ticket.createdAt) }
+                    </h2> 
+                    <h2 className = "due-date">
+                        <i class="far fa-bell"></i> { ticket.dueDate 
+                            ? UtilService.getFormatDate(ticket.dueDate) 
+                            : 'Off'
+                        }
+                    </h2>
+                    <button className = "remove-btn" onClick = { ev => {
+                        ev.stopPropagation()
                         onTicketRemove(ticket._id) 
                         }}><i className="fas fa-trash-alt"></i></button>
                     <Link className = "edit-link" to = {`/ticket/edit/${ticket._id}`} ><i className="fas fa-edit"></i> </Link>

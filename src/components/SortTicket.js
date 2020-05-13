@@ -4,16 +4,16 @@ import SortBySelect from './SortBySelect';
 
 const SortTicket = props => {
     const sortBy = useSelector(state => state.TicketReducer.sortBy);
-    
     return (
         <section className = "sort-ticket" >
             <SortBySelect 
                 select = {{
                     name: 'key',
                     options: [
-                        { value: 'createdAt', title: 'Created Date', isSelected: sortBy.key === 'createdAt' },
-                        { value: 'dueDate', title: 'Due Date', isSelected: sortBy.key === 'dueDate' }
-                    ]
+                        { value: 'createdAt', title: 'Created Date' },
+                        { value: 'dueDate', title: 'Due Date' }
+                    ],
+                    defaultValue : { defaultValue: sortBy.key }
                 }}
                 sortSelected = { props.onSetSortBy } 
             />
@@ -21,9 +21,10 @@ const SortTicket = props => {
                 select = {{
                     name: 'order',
                     options: [
-                        { value: '1', title: 'Newer to Older', isSelected: sortBy.order === '1' },
-                        { value: '-1', title: 'Older to Newer', isSelected: sortBy.order === '-1' }
-                    ]
+                        { value: '1', title: 'Newer to Older' },
+                        { value: '-1', title: 'Older to Newer' }
+                    ],
+                    defaultValue: { defaultValue: sortBy.order }
                 }}
                 sortSelected = { props.onSetSortBy }
             />

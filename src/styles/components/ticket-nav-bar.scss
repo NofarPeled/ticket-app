@@ -1,10 +1,11 @@
 .ticket-nav-bar {
     display: flex;
     justify-content: space-around;
+    margin: 1rem 0;
     .add-ticket-link {
         position: fixed;
-        bottom: 40px;
-        right: 40px;
+        bottom: 2%;
+        right: 2%;
         background-color: $main-color;
         color: $color3;
         padding: 15px;

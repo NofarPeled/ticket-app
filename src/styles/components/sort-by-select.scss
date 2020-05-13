@@ -1,9 +1,12 @@
 .sort-by-select {
     margin: 10px auto;
-    margin-right: 5px;
+
     overflow: hidden;
     border-radius: 4px;
-    padding: 10px;
+
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
 
     select {
         flex: 1;

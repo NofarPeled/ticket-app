@@ -15,9 +15,11 @@ const TicketList = props => {
 
     const ticketList = sortedTickets.map(ticket => {
         return (
-            <li className = "ticket-list-li" key = { ticket._id } >
-                <TicketPreview ticket = { ticket } onTicketRemove = { props.onTicketRemove }/>
-            </li>
+            <TicketPreview 
+                ticket = { ticket } 
+                onTicketRemove = { props.onTicketRemove } 
+                key = { ticket._id }
+            />
         )
     });
         

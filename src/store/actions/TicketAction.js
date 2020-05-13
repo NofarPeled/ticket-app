@@ -58,7 +58,7 @@ export const query = () => {
     return async dispatch => {
         try {
             const tickets = await TicketService.query();
-            dispatch(setTickets(tickets ? tickets : []));
+            dispatch(setTickets(tickets));
         } catch (err) {
             throw err;
         }
