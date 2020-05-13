@@ -45,8 +45,13 @@ const TicketDetails = props => {
                     <button className = 'remove-btn' onClick = { ev => {
                         ev.stopPropagation()
                         onTicketRemove(ticket._id) 
-                        }}><i className='fas fa-trash-alt'></i></button>
-                    <Link className = 'edit-link' to = {`/ticket/edit/${ticket._id}`} ><i className='fas fa-edit'></i> </Link>
+                        }}
+                    >
+                        <i className='fas fa-trash-alt'></i>
+                    </button>
+                    <Link className = 'edit-link' to = { process.env.PUBLIC_URL + `/ticket/edit/${ticket._id}`} >
+                        <i className='fas fa-edit'></i> 
+                    </Link>
 
                 </section>
                 : null

@@ -1,33 +1,69 @@
 .ticket-edit {
+
     .title {
-        font-size: 2rem;
-        font-family: $theme-font;
-        font-weight: bolder;
-        margin-top: 45px;
         display: block;
         text-align: center;
+
+        font-family: $theme-font;
+        font-size: 2rem;
+        font-weight: bolder;
+
+        margin-top: 20px;
     }
+    
     form {
-        margin: 40px;
         display: flex;
         flex-direction: column;
+
+        margin: 20px auto;
+        width: 80vw;
+        max-height: 75vh;
+
         & > * {
-            margin-top: 10px;
-            font-family: $main-font;
+            border: none;
         }
 
-        & input, textarea {
-            font-family: $main-font;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: none;
-            padding: 5px;
-        }
-        
-        & input[type=submit]{
+        .subject-input {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            height: 100%;
+            padding: 10px;
+            
+            font-size: 2rem;
+            font-family: $theme-font;
+            font-weight: bold;
+            color: $color3;
+
             background-color: $main-color;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .body-input, .due-date-input {
+            font-size: 1rem;
+            padding: 7px;
+            font-family: $main-font;
+            width: 100%;
+        }
+
+        .due-date-input {
+            text-align: center;
+            background-color: $color2;
+        }
+
+        .submit-btn {
             color: $color4;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
+            
+            background-color: $main-color;
+            border-radius: 0 0 5px 5px;
+
+            padding: 7px 10px;
+        }
+
+        @media (max-width: 700px) {
+            width: 95vw;
         }
     }
 }

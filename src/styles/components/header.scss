@@ -1,12 +1,12 @@
 .header-section {
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     height: 8vh;
     background-color: $main-color;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.19);
+    clip-path: ellipse(90% 85% at 50% 12%);
 
     .header-title, i {
         color: $color3;

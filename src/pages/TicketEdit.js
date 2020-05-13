@@ -42,12 +42,38 @@ const TicketEdit = props => {
     return (
         <section className = 'ticket-edit'>
             <Header />
-            <h1 className = 'title'>{id ? 'Edit Ticket' : 'Create Ticket'}</h1>
+            <h1 className = 'title'>{ id ? 'Edit Ticket' : 'Create Ticket' }</h1>
             <form  onSubmit = { onTicketSubmit}>
-                <input type = 'text' name = 'subject' placeholder = 'Title' value = { ticket.subject } onChange = { onEditTicket } />
-                <textarea rows ='4' type = 'text' name = 'body' placeholder = 'Body' value = { ticket.body } onChange = { onEditTicket } />
-                <input type = 'date' name = 'dueDate' placeholder = 'Due Date' value = { ticket.dueDate } onChange = { onEditTicket }/>
-                <input type = 'submit' placeholder = { id ? 'Update Ticket' : 'Add Ticket'} />
+                <input 
+                    type = 'text' 
+                    name = 'subject' 
+                    placeholder = 'Title' 
+                    value = { ticket.subject } 
+                    onChange = { onEditTicket } 
+                    className = 'subject-input'
+                />
+                <textarea 
+                    rows ='20' 
+                    type = 'text' 
+                    name = 'body' 
+                    placeholder = 'Body' 
+                    value = { ticket.body } 
+                    onChange = { onEditTicket } 
+                    className = 'body-input'
+                />
+                <input 
+                    type = 'date' 
+                    name = 'dueDate' 
+                    placeholder = 'Due Date' 
+                    value = { ticket.dueDate } 
+                    onChange = { onEditTicket }
+                    className = 'due-date-input'
+                />
+                <input 
+                    type = 'submit' 
+                    placeholder = { id ? 'Update Ticket' : 'Add Ticket'}
+                    className = 'submit-btn' 
+                />
             </form>
         </section>
     )

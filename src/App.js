@@ -19,9 +19,9 @@ const App = () => {
    <Router>
       <div className = 'App'>
         <Switch>
-          <Route path = '/ticket/edit/:id?' component = { TicketEdit } />
-          <Route path = '/ticket/:id' component = { TicketDetails } />
-          <Route path = '/' component = { TicketApp } />
+          <Route path = { process.env.PUBLIC_URL + '/ticket/edit/:id?' } component = { TicketEdit } />
+          <Route path = { process.env.PUBLIC_URL + '/ticket/:id' } component = { TicketDetails } />
+          <Route path = { process.env.PUBLIC_URL + '/' } component = { TicketApp } />
         </Switch>
       </div>
    </Router>

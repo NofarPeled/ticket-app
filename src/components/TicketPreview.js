@@ -19,11 +19,19 @@ const TicketPreview = props => {
                     : 'Off' 
                 }
             </h2>
-            <button className = 'delete-btn' onClick = { (ev) => {
+            <button className = 'delete-btn' onClick = { ev => {
                 ev.stopPropagation()
                 props.onTicketRemove(ticket._id) 
-            } }><i className='fas fa-trash-alt'></i></button>
-            <Link onClick = { ev => ev.stopPropagation() } className = 'edit-ticket-link' to = { `/ticket/edit/${ticket._id}` } ><i className='fas fa-edit'></i> </Link>
+            }}>
+                <i className='fas fa-trash-alt'></i>
+            </button>
+            <Link 
+                onClick = { ev => ev.stopPropagation() } 
+                className = 'edit-ticket-link' 
+                to = { process.env.PUBLIC_URL + `/ticket/edit/${ticket._id}` } 
+            >
+                <i className='fas fa-edit'></i> 
+            </Link>
         </li>
     )
 }

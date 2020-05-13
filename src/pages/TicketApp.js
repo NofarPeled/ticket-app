@@ -35,7 +35,7 @@ const TicketApp = () => {
     }
 
     return (
-        <section className = "ticket-app-page">
+        <section className = 'ticket-app-page'>
             <Header />
             <TicketNavBar onSetSortBy = { onSetSortBy } />
             <TicketList tickets = { tickets } onTicketRemove = { onTicketRemove } sortBy = { sortBy }/>
