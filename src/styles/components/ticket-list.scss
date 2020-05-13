@@ -3,12 +3,15 @@
     grid-auto-rows: 1fr;
 
     margin: 2rem 40px 4.5rem;
-
     min-height: 50vh;
 
     border-radius: 4px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
     background-color: $color3;
+
+    & > *:nth-child(odd) {
+        background-color: $color2;
+    }
 
     @media (max-width: 700px) {
         margin: 1rem 20px 4.5rem;
