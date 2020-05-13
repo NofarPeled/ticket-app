@@ -1,5 +1,5 @@
 {
-  "short_name": "Ticket App",
+  "short_name": "ticket",
   "name": "Ticket App",
   "icons": [
     {
@@ -8,5 +8,8 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "."
+  "start_url": "./ticket-app",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
