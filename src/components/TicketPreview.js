@@ -11,10 +11,10 @@ const TicketPreview = props => {
             <h1 className = 'title'> { ticket.subject } </h1>
             <h2 className = 'body'> { ticket.body } </h2>  
             <h2 className = 'create-at'>                         
-                <i class="far fa-clock"></i> { UtilService.getFormatDate(ticket.createdAt) } 
+                <i className = 'far fa-clock'></i> { UtilService.getFormatDate(ticket.createdAt) } 
             </h2> 
             <h2 className = 'due-date'>
-                <i class="far fa-bell"></i> { ticket.dueDate 
+                <i className = 'far fa-bell'></i> { ticket.dueDate 
                     ? UtilService.getFormatDate(ticket.dueDate) 
                     : 'Off' 
                 }

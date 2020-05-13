@@ -24,7 +24,7 @@ const TicketList = props => {
     });
         
     return (
-        <ul className = "ticket-list clean-list">
+        <ul className = 'ticket-list clean-list'>
             { ticketList }
         </ul>
     )

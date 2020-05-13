@@ -5,7 +5,7 @@ import SortBySelect from './SortBySelect';
 const SortTicket = props => {
     const sortBy = useSelector(state => state.TicketReducer.sortBy);
     return (
-        <section className = "sort-ticket" >
+        <section className = 'sort-ticket' >
             <SortBySelect 
                 select = {{
                     name: 'key',

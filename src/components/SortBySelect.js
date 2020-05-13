@@ -12,7 +12,7 @@ const SortBySelect = props => {
    });
    
     return (
-        <select className = "sort-by-select" 
+        <select className = 'sort-by-select' 
             defaultValue = { select.defaultValue }
             onChange = { 
                 ev => { 

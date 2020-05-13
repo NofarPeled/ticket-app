@@ -17,7 +17,7 @@ const App = () => {
 
   return (
    <Router>
-      <div className="App">
+      <div className = 'App'>
         <Switch>
           <Route path = '/ticket/edit/:id?' component = { TicketEdit } />
           <Route path = '/ticket/:id' component = { TicketDetails } />
