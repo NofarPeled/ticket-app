@@ -11,7 +11,7 @@ const TicketList = props => {
             return isFinite(firstValue[sortBy.key]-secondValue[sortBy.key]) 
                 ? firstValue[sortBy.key]-secondValue[sortBy.key] 
                 : isFinite(firstValue[sortBy.key]) ? -1 : 1;
-        })
+    });
 
     const ticketList = sortedTickets.map(ticket => {
         return (
@@ -20,14 +20,14 @@ const TicketList = props => {
                 onTicketRemove = { props.onTicketRemove } 
                 key = { ticket._id }
             />
-        )
+        );
     });
         
     return (
         <ul className = 'ticket-list clean-list'>
             { ticketList }
         </ul>
-    )
+    );
 };
 
 export default TicketList;

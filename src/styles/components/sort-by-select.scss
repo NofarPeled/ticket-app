@@ -1,21 +1,8 @@
 .sort-by-select {
     margin: 10px auto;
-
-    overflow: hidden;
     border-radius: 4px;
 
     &:not(:last-child) {
-        margin-right: 5px;
-    }
-
-    select {
-        flex: 1;
-        padding: 0 .5em;
-        color: #fff;
-        cursor: pointer;
-    }
-    
-    option {
-        background-color: white;
+        margin-right: 1rem;
     }
 }

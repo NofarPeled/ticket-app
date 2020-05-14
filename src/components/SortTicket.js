@@ -29,7 +29,7 @@ const SortTicket = props => {
                 sortSelected = { props.onSetSortBy }
             />
         </section>
-    )
-}
+    );
+};
 
 export default SortTicket;

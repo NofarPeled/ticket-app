@@ -12,17 +12,19 @@ const TicketNavBar = props => {
             setWidth(window.innerWidth);
         });
         return () => {
-            window.removeEventListener('resize', () => {});
+            window.removeEventListener('resize', () => {
+                setWidth(window.innerWidth);
+            });
         };
     });
     return (
-        <nav className = 'ticket-nav-bar'>
+        <nav className = 'ticket-navbar'>
             <SortTicket onSetSortBy = { props.onSetSortBy }/>
-            <Link className = 'add-ticket-link' to = { process.env.PUBLIC_URL + '/ticket/edit' }>
+            <Link className = 'navbar-add-ticket-link' to = { process.env.PUBLIC_URL + '/ticket/edit' }>
                 { width > 750 ? 'New Ticket' : <i className='fas fa-plus'></i> }
             </Link>
         </nav>
-    )
-}
+    );
+};
 
 export default TicketNavBar;

@@ -8,15 +8,14 @@
     background-color: $main-color;
     clip-path: ellipse(70% 85% at 50% 12%);
 
-    .header-title, i {
+    .header-link > * {
         color: $color3;
         font-size: 2.5rem;
         display: inline-block;
         cursor: pointer;
-    }
 
-    .header-title { 
-        font-family: $theme-font;
+        &.header-title { 
+            font-family: $theme-font;
+        }
     }
-    
 }

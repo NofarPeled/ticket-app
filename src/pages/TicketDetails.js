@@ -12,18 +12,28 @@ const TicketDetails = props => {
     const { id } = props.match.params;
     
     useEffect(()=> {
-        dispatch(getById(id));
+        onGetTicketById(id)
     }, [])
 
-    const onTicketRemove = async () => {
+    const onRemoveTicket = async id => {
         try {
             const res = await AlertService.confirmAlert('Are You Sure You Want To Delete Ticket? ');
-            if (res) await dispatch(remove(id));        
-            props.history.push(process.env.PUBLIC_URL + '/');
+            if (res) {
+                await dispatch(remove(id));        
+                props.history.push(process.env.PUBLIC_URL + '/');
+            }; 
         } catch (err) {
-            AlertService.eventAlert('Failed to Delete Ticket')
-        }
-    }
+            AlertService.eventAlert('Failed to Delete Ticket');
+        };
+    };
+
+    const onGetTicketById = async id => {
+        try {
+            await dispatch(getById(id));
+        } catch (err) {
+            AlertService.eventAlert('Failed to Get Ticket');
+        };
+    };
 
     return (
         <section className = 'ticket-details-page'>
@@ -32,23 +42,23 @@ const TicketDetails = props => {
                     <h1 className = 'title'>{ticket.subject}</h1>
                     <h2 className = 'body'>{ticket.body}</h2>
                     <h2 className = 'created-at'>
-                        <i className = 'far fa-clock'></i> { UtilService.getFormatDate(ticket.createdAt) }
+                        <i className = 'far fa-clock'/> { UtilService.getFormatDate(ticket.createdAt) }
                     </h2> 
                     <h2 className = 'due-date'>
-                        <i className = 'far fa-bell'></i> { ticket.dueDate 
+                        <i className = 'far fa-bell'/> { ticket.dueDate 
                             ? UtilService.getFormatDate(ticket.dueDate) 
                             : 'Off'
                         }
                     </h2>
                     <button className = 'remove-btn' onClick = { ev => {
                         ev.stopPropagation()
-                        onTicketRemove(ticket._id) 
+                        onRemoveTicket(ticket._id) 
                         }}
                     >
-                        <i className='fas fa-trash-alt'></i>
+                        <i className='fas fa-trash-alt'/>
                     </button>
                     <Link className = 'edit-link' to = { process.env.PUBLIC_URL + `/ticket/edit/${ticket._id}`} >
-                        <i className='fas fa-edit'></i> 
+                        <i className='fas fa-edit'/>
                     </Link>
 
                 </section>
@@ -56,7 +66,7 @@ const TicketDetails = props => {
             }
 
         </section>
-    )
-}
+    );
+};
 
 export default TicketDetails;

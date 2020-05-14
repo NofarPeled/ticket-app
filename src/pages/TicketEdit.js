@@ -18,25 +18,26 @@ const TicketEdit = props => {
     useEffect(()=> {
         if (id) (async () => {
             setTicket({...await dispatch(getById(id))});
-        })()
-    }, [])
+        })();
+    }, []);
 
     const onEditTicket = ev => {
-        const {name, value} = ev.target;
-        setTicket({...ticket, [name]: value});
-    }
+        const { name, value } = ev.target;
+        setTicket({ ...ticket, [name]: value });
+    };
 
     const onTicketSubmit = async ev => {
-        ev.preventDefault()
+        ev.preventDefault();
         try {
             ticket.createdAt = id ? ticket.createdAt : Date.now();
-            id ? await dispatch(update(ticket)) : await dispatch(add(ticket));
+            id 
+                ? await dispatch(update(ticket)) 
+                : await dispatch(add(ticket));
             props.history.push(`/`);
         } catch (err) {            
             AlertService.eventAlert(`Failed to ${id ? 'Update' : 'Add'} Ticket` , 'error');
-        }
-        
-    }
+        };
+    };
 
     return (
         <section className = 'ticket-edit'>
@@ -74,7 +75,7 @@ const TicketEdit = props => {
                 />
             </form>
         </section>
-    )
-}
+    );
+};
 
 export default TicketEdit;

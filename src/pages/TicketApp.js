@@ -20,25 +20,25 @@ const TicketApp = () => {
             const updatedSortBy = {...sortBy, [sort.name]: sort.value};
             dispatch(updateSort(updatedSortBy));
         } catch (err) {
-            AlertService.eventAlert('Failed to Sort Tickets', 'error')
-        }
-    }    
+            AlertService.eventAlert('Failed to Sort Tickets', 'error');
+        };
+    };
 
     const onTicketRemove = async id => {
         try {
             const res = await AlertService.confirmAlert('Are You Sure?');
             if (res) dispatch(remove(id));        
         } catch (err) {
-            AlertService.eventAlert('Failed to Delete Ticket', 'error')
-        }
-    }
+            AlertService.eventAlert('Failed to Delete Ticket', 'error');
+        };
+    };
 
     return (
         <section className = 'ticket-app-page'>
             <TicketNavBar onSetSortBy = { onSetSortBy } />
             <TicketList tickets = { tickets } onTicketRemove = { onTicketRemove } sortBy = { sortBy }/>
         </section>
-    )
-}
+    );
+};
 
 export default TicketApp;

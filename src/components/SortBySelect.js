@@ -26,7 +26,7 @@ const SortBySelect = props => {
             }
 
         </select>
-    )
-}
+    );
+};
 
 export default SortBySelect;
